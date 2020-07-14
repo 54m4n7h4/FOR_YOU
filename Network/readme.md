@@ -26,5 +26,6 @@ Et baOund !
 
 On a le flag
 
+![](w.png?raw=true)
 
 FLAG{HAPPY_BIRTHDAY_BIBLIS}
