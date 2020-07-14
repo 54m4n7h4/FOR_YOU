@@ -25,3 +25,10 @@ On retoune sur radare pour le niquer.
 
 # Renversement de la situation
 
+On lance l'exécutable en mode débogage sur radare2 avec la commande : 
+
+```bash
+  r2 -d Find_me.exe
+
+```
+
