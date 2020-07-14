@@ -32,3 +32,71 @@ On lance l'exécutable en mode débogage sur radare2 avec la commande :
 
 ```
 
+Analyser tout les symboles et on affiche tous les fonctions aussi avec les commandes suivantes :
+
+```bash
+    aaa
+
+```
+
+
+![](aaa_afl.png?raw=true)
+
+
+Analysons le code assembleur du main
+
+On utilise la commande :
+
+```bash
+    pdf@main
+
+```
+
+![](main.png?raw=true)
+
+
+On a la fonction sym.l37_m3_h3r3 qui attire l'attention
+
+
+![](mainf.png?raw=true)
+
+
+On le désassemble alors avec la commande :
+
+```bash
+    pdf@sym.l37_m3_h3r3
+
+```
+
+
+![](l37_m3_h3r3.png?raw=true)
+
+On a comme ça un truc de malade.
+
+On a quatre chaînes en hexadécimale qui sont interèssant.
+
+```bash
+
+0x464c41477b ; '{GALF
+0x48415050595f ; '_YPPAH'
+0x4249525448444159 ; 'YADHTRIB'
+0x5f4249424c49537d ; '}SILBIB_'
+
+```
+Pour trouver le flag il faut juste utiliser xxd sous linux
+
+
+```bash
+
+xxd -r -p <<<"0x464c41477b"
+xxd -r -p <<<"0x48415050595f"
+xxd -r -p <<<"0x4249525448444159"
+xxd -r -p <<<"0x5f4249424c49537d"
+        
+        OU
+ xxd -r -p <<<"0x464c41477b" ;xxd -r -p <<<"0x48415050595f";xxd -r -p <<<"0x4249525448444159";xxd -r -p <<<"0x5f4249424c49537d"
+```
+
+FLAG{HAPPY_BIRTHDAY_BIBLIS}
+
+On a enfin niquer le programme
