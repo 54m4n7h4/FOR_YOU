@@ -12,7 +12,9 @@ L'executable est de type ELF
 On l'execute et puis le programme nous chasse avec insulte.
 
 ça me met en colère !
+
 Quelle galère !
+
 C'est vraiment misère !
 
 
